@@ -7,8 +7,8 @@ services:
     ports:
      - "8228:8228"
      - "8338:8338"
-    volumes:
-     - anchoreroot:/config/
+#    volumes:
+#     - anchoreroot:/config/
      #- /var/run/docker.sock:/var/run/docker.sock
     logging:
      driver: "json-file"
@@ -16,8 +16,8 @@ services:
       max-size: 100m
   anchore-db:
     image: "postgres:9"
-    volumes:
-     - anchoredb:/var/lib/postgresql/data/pgdata/
+#    volumes:
+#     - anchoredb:/var/lib/postgresql/data/pgdata/
     environment:
       - POSTGRES_PASSWORD=mysecretpassword
       - PGDATA=/var/lib/postgresql/data/pgdata/
