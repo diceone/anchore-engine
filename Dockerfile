@@ -2,4 +2,4 @@ FROM anchore/anchore-engine:latest
 
 RUN mkdir -p /config
 
-COPY config.yml /config/
+COPY config.yaml /config/
